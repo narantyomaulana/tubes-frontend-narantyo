@@ -1,89 +1,71 @@
 import React from 'react'
-
+import { useState, useEffect } from 'react';
 import {Link} from 'react-router-dom';
 
+
 const Home = () => {
+
 return (
-<div>
   <div>
-    <nav className="navbar navbar-expand-md bg-light shadow navbar-light">
+  <header className="header-area">
+    <nav className="navbar navbar-expand-md navbar-dark">
       <div className="container">
-        {/* Brand */}
-        <a className="navbar-brand" href="/index.html">Heroes</a>
-        {/* Toggler/collapsibe Button */}
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-          <span className="navbar-toggler-icon" />
+        <a href="#" className="navbar-brand">Narantyo Maulana</a>
+        <button type="button" className="navbar-toggler collapsed" data-toggle="collapse" data-target="#main-nav">
+          <span className="menu-icon-bar" />
+          <span className="menu-icon-bar" />
+          <span className="menu-icon-bar" />
         </button>
-        {/* Navbar links */}
-        <div className="collapse navbar-collapse" id="collapsibleNavbar">
-          <ul className="navbar-nav">
-            <li className="nav-item">
-              <Link to="/" className="nav-link">
+        <div id="main-nav" className="collapse navbar-collapse">
+          <ul className="navbar-nav ml-auto">
+            <li>
+            <Link to="/" className="nav-link">
               Home
-              </Link>
+            </Link>
             </li>
-            <li className="nav-item">
+            <li>
               <Link to="/about" className="nav-link">
               About
-              </Link>
+            </Link>
             </li>
           </ul>
         </div>
       </div>
     </nav>
-    <br />
-    <div className="container">
-      <h2>
-        Indonesia's Heroes History
-      </h2>
-      <select className="heroes-search w-100" id="heroes" name="heroes">
-        <option selected disabled value>Search Here...</option>
-        <option value="all">All</option>
-      </select>
-      <br /><br /><br />
-      <div className="table-responsive">
-        <table className="table table-hover">
-          <thead>
-            <tr>
-              <td>
-                No
-              </td>
-              <td>
-                Name
-              </td>
-              <td>
-                Birth Year
-              </td>
-              <td>
-                Death Year
-              </td>
-              <td>
-                Ascension Year
-              </td>
-              <td>
-                Description
-              </td>
-            </tr>
-          </thead>
-          <tbody>
-          </tbody>
-        </table>
-      </div>
-      <div className="mt-3 text-primary" id="loadingBar">
-        <div className="spinner-border spinner-border-sm" /> loading
+    <div className="banner">
+      <div className="container">
+        <h1>Daftar Pahlawan</h1>
+        <p>Menampilkan List Semua Pahlawan</p>
+        <button  className="button button-primary">
+          <Link to="/search" className="nav-link">
+            Cari Pahlawan
+            </Link>
+        </button>
+   
       </div>
     </div>
-    <br />
-    <div className="container-fluid py-2 border-top">
-      <div className="container text-secondary">
-        <small>
-          Copyright by Narantyo Maulana
-        </small>
+  </header>
+  {/* <main>
+    <section id="content" className="content">
+      <div className="container">
+        <div className="row">
+          <div className="col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit ex. Etiam elementum lectus et tempor molestie. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. Etiam non erat finibus, iaculis nunc vel, convallis eros. Etiam efficitur tempor dui, vitae fringilla ipsum tristique quis. Aliquam erat volutpat. Cras ullamcorper ex et viverra vulputate. Nam lectus ligula, pretium nec risus nec, ultricies fringilla mauris. Proin quis venenatis neque, iaculis porta nulla. </p>
+          </div>
+          <div className="col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit ex. Etiam elementum lectus et tempor molestie. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. Etiam non erat finibus, iaculis nunc vel, convallis eros. Etiam efficitur tempor dui, vitae fringilla ipsum tristique quis. Aliquam erat volutpat. Cras ullamcorper ex et viverra vulputate. Nam lectus ligula, pretium nec risus nec, ultricies fringilla mauris. Proin quis venenatis neque, iaculis porta nulla. </p>
+          </div>
+          <div className="col-md-4">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec elit ex. Etiam elementum lectus et tempor molestie. Pellentesque vestibulum dui sit amet dui volutpat sollicitudin. Etiam non erat finibus, iaculis nunc vel, convallis eros. Etiam efficitur tempor dui, vitae fringilla ipsum tristique quis. Aliquam erat volutpat. Cras ullamcorper ex et viverra vulputate. Nam lectus ligula, pretium nec risus nec, ultricies fringilla mauris. Proin quis venenatis neque, iaculis porta nulla. </p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </section>
+  </main> */}
 </div>
+
 )
+
 }
 
 export default Home
