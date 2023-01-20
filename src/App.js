@@ -4,7 +4,6 @@ import "bootstrap/dist/js/bootstrap.min.js";
 import MainLayout from './mainlayout/mainlayout';
 import About from './components/about/About';
 import List from './components/List/List';
-import Search from './components/Search/Search';
 import {BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -14,7 +13,6 @@ function App() {
           <Route path="/" element ={<MainLayout />}/>
           <Route path="/about" element ={<About />}/>
           <Route path="/list" element ={<List />}/>
-          <Route path="/search" element ={<Search />}/>
         </Routes>
       </BrowserRouter>
   );
