@@ -7,8 +7,8 @@ const List = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [searchValue, setSearchValue] = useState('');
 
-  const filteredData = pahlawan?.filter(i => {
-    return i.name.toLowerCase().includes(searchValue.toLowerCase());
+  const filteredData = pahlawan?.filter(item => {
+    return item.name.toLowerCase().includes(searchValue.toLowerCase());
   });
 
   const handleChange = event => {
