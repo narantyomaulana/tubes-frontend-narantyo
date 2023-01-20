@@ -7,8 +7,8 @@ const List = () => {
   const [selectedOption, setSelectedOption] = useState('');
   const [searchValue, setSearchValue] = useState('');
 
-  const filteredData = pahlawan?.filter(item => {
-    return item.name.toLowerCase().includes(searchValue.toLowerCase());
+  const filteredData = pahlawan?.filter(i => {
+    return i.name.toLowerCase().includes(searchValue.toLowerCase());
   });
 
   const handleChange = event => {
@@ -23,7 +23,6 @@ const List = () => {
       const response = await fetch('https://19104008-mhs.bdv.or.id/api/heroes.php');
       const json = await response.json();
       setPahlawan(json);
-
   }
   useEffect(() => {
     getHeroes();
@@ -47,7 +46,7 @@ const List = () => {
                   <input
                     type="text"
                     className="form-control form-control-lg"
-                    placeholder="Search"
+                    placeholder="Search Pahlawan"
                     onChange={handleSearch} 
                     value={searchValue}
                   />
@@ -59,7 +58,7 @@ const List = () => {
       </div>
       {/* Search */}
       <select onChange={handleChange} className='btn btn-secondary dropdown-toggle w-100'  id="heroes" name="heroes">
-        <option selected disabled value="">Show Now ...</option>
+        <option selected disabled value="">Show All Pahlawan ...</option>
         {pahlawan?.map((pahlawan, index) => (
           <option value={index}>{pahlawan.name}</option>
         )) }
