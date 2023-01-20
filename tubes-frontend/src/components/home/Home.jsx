@@ -37,7 +37,7 @@ return (
         <h1>Daftar Pahlawan</h1>
         <p>Menampilkan List Semua Pahlawan</p>
         <button  className="button button-primary">
-          <Link to="/search" className="nav-link">
+          <Link to="/list" className="nav-link">
             Cari Pahlawan
             </Link>
         </button>
